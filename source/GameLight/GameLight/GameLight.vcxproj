@@ -112,9 +112,6 @@
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="QGameLight.ui" />
-  </ItemGroup>
-  <ItemGroup>
     <QtRcc Include="QGameLight.qrc" />
   </ItemGroup>
   <ItemGroup>
