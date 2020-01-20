@@ -1,1 +1,1 @@
-#include <QtWidgets>
+#include <QtWidgets/QtWidgets>

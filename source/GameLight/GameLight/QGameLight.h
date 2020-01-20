@@ -1,14 +1,14 @@
 #pragma once
 
 #include <QtWidgets/QDialog>
-#include <QPixmap>
-#include <QPushButton>
-#include <QCheckBox>
-#include <QLabel>
-#include <QLine>
-#include <QLayout>
-#include <QVBoxLayout>
-#include <QHBoxLayout>
+#include <QtGui/QPixmap>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QLabel>
+#include <QtCore/QLine>
+#include <QtWidgets/QLayout>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QHBoxLayout>
 
 class QGameLight : public QDialog
 {
