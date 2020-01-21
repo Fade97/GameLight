@@ -10,5 +10,8 @@ public:
 
 private:
 	eRetCode initUI();
+	QLabel* addEntry( QString sName );
+
+	void paintEvent( QPaintEvent *pe );
 };
 
