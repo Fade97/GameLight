@@ -51,7 +51,7 @@
   </ImportGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <QtInstall>5.9.0 DLL64</QtInstall>
-    <QtModules>core;gui;serialport;widgets</QtModules>
+    <QtModules>core;gui;widgets</QtModules>
   </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <QtInstall>5.9.0 DLL64</QtInstall>
@@ -101,7 +101,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="GLErrorHandler.cpp" />
     <ClCompile Include="QGameLight.cpp" />
+    <ClCompile Include="QSideMenu.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
@@ -109,6 +111,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QGameLight.h" />
+    <QtMoc Include="QSideMenu.h" />
+    <QtMoc Include="GLDefines.h" />
+    <ClInclude Include="GLErrorHandler.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>

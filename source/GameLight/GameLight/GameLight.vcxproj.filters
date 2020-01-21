@@ -30,14 +30,29 @@
     <ClCompile Include="QGameLight.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QSideMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GLErrorHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GLErrorHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QGameLight.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QSideMenu.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="GLDefines.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

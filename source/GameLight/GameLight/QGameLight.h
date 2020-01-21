@@ -1,15 +1,16 @@
 #pragma once
 
-#include <QtWidgets/QDialog>
-#include <QtGui/QPixmap>
-#include <QtWidgets/QPushButton>
-#include <QtWidgets/QCheckBox>
-#include <QtWidgets/QLabel>
-#include <QtCore/QLine>
-#include <QtWidgets/QLayout>
-#include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QHBoxLayout>
+#include <QDialog>
+#include <QPixmap>
+#include <QPushButton>
+#include <QCheckBox>
+#include <QLabel>
+#include <QLine>
+#include <QLayout>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
 
+class QSideMenu;
 class QGameLight : public QDialog
 {
 	Q_OBJECT
@@ -18,6 +19,8 @@ public:
 	QGameLight(QWidget *parent = Q_NULLPTR);
 
 private:
+	QSideMenu *m_pSideMenu;
+
 	QHBoxLayout *m_pMainLayout;
 	QVBoxLayout *m_pMenuLayout;
 	QWidget *m_pMenuLayoutConstraint;
