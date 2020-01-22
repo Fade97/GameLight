@@ -11,7 +11,7 @@
 #include <QHBoxLayout>
 
 class QSideMenu;
-class QGameLight : public QDialog
+class QGameLight : public QMainWindow
 {
 	Q_OBJECT
 

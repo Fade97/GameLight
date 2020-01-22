@@ -19,6 +19,11 @@
       <Extensions>qrc;*</Extensions>
       <ParseFiles>false</ParseFiles>
     </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -34,6 +39,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GLErrorHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QGLPushButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -55,6 +63,9 @@
     <QtMoc Include="GLDefines.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="QGLPushButton.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="QGameLight.qrc">
@@ -63,5 +74,13 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GameLight.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="gamelight_de.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="gamelight_en.ts">
+      <Filter>Translation Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

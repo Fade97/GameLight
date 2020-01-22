@@ -103,6 +103,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="GLErrorHandler.cpp" />
     <ClCompile Include="QGameLight.cpp" />
+    <ClCompile Include="QGLPushButton.cpp" />
     <ClCompile Include="QSideMenu.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -114,6 +115,7 @@
     <QtMoc Include="QSideMenu.h" />
     <QtMoc Include="GLDefines.h" />
     <ClInclude Include="GLErrorHandler.h" />
+    <QtMoc Include="QGLPushButton.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +123,10 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GameLight.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="gamelight_de.ts" />
+    <None Include="gamelight_en.ts" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
