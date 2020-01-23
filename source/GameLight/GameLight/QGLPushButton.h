@@ -1,18 +1,19 @@
 #pragma once
 #include <QPushButton>
+#include <string>
 class QGLPushButton :
 	public QPushButton
 {
 	Q_OBJECT
 
 public:
-	QGLPushButton( QWidget* parent = ( QWidget* )nullptr, QString sText = "Button", int iIndex = -1 );
+	QGLPushButton( QWidget* parent = ( QWidget* )nullptr, QString sText = "Button", std::string sPageName = "" );
 
 signals:
-	void clicked( int iIndex );
+	void clicked( std::string iIndex );
 
 private:
-	int m_iIndex;
+	std::string m_sPageName;
 
 private slots:
 	void onButtonClicked();

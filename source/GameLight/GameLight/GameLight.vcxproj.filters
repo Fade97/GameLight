@@ -47,11 +47,14 @@
     <ClCompile Include="QGLPushButton.cpp">
       <Filter>Widgets</Filter>
     </ClCompile>
+    <ClCompile Include="QMainWidget.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
     <ClCompile Include="QGenericSettings.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Widgets</Filter>
     </ClCompile>
     <ClCompile Include="QFlowLayout.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Widgets</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +82,9 @@
       <Filter>Widgets</Filter>
     </QtMoc>
     <QtMoc Include="QGenericSettings.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QMainWidget.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

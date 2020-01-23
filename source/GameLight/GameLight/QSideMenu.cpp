@@ -4,7 +4,7 @@
 QSideMenu::QSideMenu( QWidget* parent /*= Q_NULLPTR */ )
 	: QWidget( parent )
 {
-	GLErrorHandler( initUI(), "QSideMenu::initUI()" );
+	GLErrorHandler( initUI(), " -> QSideMenu::initUI()" );
 }
 
 eRetCode QSideMenu::initUI()
@@ -32,8 +32,9 @@ eRetCode QSideMenu::initUI()
 	lFooter->setSizePolicy( QSizePolicy( QSizePolicy::Expanding, QSizePolicy::Fixed ) );
 	lFooter->setFixedHeight( 40 );
 
-	m_pItemLayout->addWidget( addEntry( tr( "General" ) ), 0 );
-	m_pItemLayout->addWidget( addEntry( tr( "Game Settings" ) ), 0 );
+	// Add Menu Buttons here
+	m_pItemLayout->addWidget( addEntry( tr( "General" ), "sideMenu" ), 0 );
+	m_pItemLayout->addWidget( addEntry( tr( "Game Settings" ), "genericSettings" ), 0 );
 
 	m_pMainLayout->addWidget( lMenuName, 0, Qt::AlignTop );
 	m_pMainLayout->addLayout( m_pItemLayout, 1 );
@@ -46,7 +47,7 @@ eRetCode QSideMenu::initUI()
 
 	for ( auto pItem : m_vItems )
 	{
-		connect( pItem, SIGNAL( clicked( int ) ), this, SLOT( openMenuItem( int ) ) );
+		connect( pItem, SIGNAL( clicked( std::string ) ), this, SLOT( openMenuItem( std::string ) ) );
 	}
 
 	return ret;
@@ -54,9 +55,9 @@ eRetCode QSideMenu::initUI()
 
 
 
-QGLPushButton* QSideMenu::addEntry( QString sName )
+QGLPushButton* QSideMenu::addEntry( QString sName, std::string sPageName )
 {
-	QGLPushButton *entry = new QGLPushButton( this, sName, ++m_iLastItem );
+	QGLPushButton *entry = new QGLPushButton( this, sName, sPageName );
 
 	entry->setObjectName( "menuItem" );
 	entry->setFixedHeight( 40 );
@@ -67,12 +68,10 @@ QGLPushButton* QSideMenu::addEntry( QString sName )
 	return entry;
 }
 
-void QSideMenu::openMenuItem( int iIndex )
+void QSideMenu::openMenuItem( std::string sPageName )
 {
 	// TODO:
-	QMessageBox bx;
-	bx.setText( QString::fromStdString( std::to_string( iIndex ) ) );
-	bx.exec();
+	emit onMenuItemSelected(sPageName);
 }
 
 void QSideMenu::paintEvent( QPaintEvent *pe )

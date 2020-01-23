@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "QGLPushButton.h"
 
-QGLPushButton::QGLPushButton( QWidget* parent /*= ( QWidget* )nullptr*/, QString sText /*= "Button" */, int iIndex /*= -1 */ )
-	: QPushButton( sText, parent ), m_iIndex( iIndex )
+QGLPushButton::QGLPushButton( QWidget* parent /*= ( QWidget* )nullptr*/, QString sText /*= "Button" */, std::string sPageName /*= "" */ )
+	: QPushButton( sText, parent ), m_sPageName( sPageName )
 {
 	connect( this, SIGNAL( clicked(void) ), this, SLOT( onButtonClicked(void) ) );
 
@@ -10,6 +10,6 @@ QGLPushButton::QGLPushButton( QWidget* parent /*= ( QWidget* )nullptr*/, QString
 
 void QGLPushButton::onButtonClicked()
 {
-	emit clicked( m_iIndex );
+	emit clicked( m_sPageName );
 }
 

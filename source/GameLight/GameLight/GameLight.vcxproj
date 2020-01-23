@@ -106,6 +106,7 @@
     <ClCompile Include="QGameLight.cpp" />
     <ClCompile Include="QGenericSettings.cpp" />
     <ClCompile Include="QGLPushButton.cpp" />
+    <ClCompile Include="QMainWidget.cpp" />
     <ClCompile Include="QSideMenu.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -120,6 +121,7 @@
     <QtMoc Include="QGLPushButton.h" />
     <QtMoc Include="QGenericSettings.h" />
     <ClInclude Include="QFlowLayout.h" />
+    <QtMoc Include="QMainWidget.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>

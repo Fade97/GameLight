@@ -14,7 +14,7 @@ CError QGenericSettings::getSetting( std::string sSettingName, /*OUT*/ int &iVal
 {
 	CError erRet;
 	erRet.eErrorCode = eSuccess;
-	erRet.sLocation = "QGenericSettings::getSetting()";
+	erRet.sLocation += " -> QGenericSettings::getSetting()";
 	
 	if ( m_mSettings.find( sSettingName ) == m_mSettings.end() )
 	{
@@ -33,7 +33,7 @@ CError QGenericSettings::setSetting( std::string sSettingName, int iValue )
 {
 	CError erRet;
 	erRet.eErrorCode = eSuccess;
-	erRet.sLocation = "QGenericSettings::setSetting()";
+	erRet.sLocation += " -> QGenericSettings::setSetting()";
 
 	m_mSettings[sSettingName] = iValue;
 
