@@ -102,7 +102,9 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="GLErrorHandler.cpp" />
+    <ClCompile Include="QFlowLayout.cpp" />
     <ClCompile Include="QGameLight.cpp" />
+    <ClCompile Include="QGenericSettings.cpp" />
     <ClCompile Include="QGLPushButton.cpp" />
     <ClCompile Include="QSideMenu.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -116,6 +118,8 @@
     <QtMoc Include="GLDefines.h" />
     <ClInclude Include="GLErrorHandler.h" />
     <QtMoc Include="QGLPushButton.h" />
+    <QtMoc Include="QGenericSettings.h" />
+    <ClInclude Include="QFlowLayout.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,7 @@
 <RCC>
-    <qresource prefix="QGameLight">
+    <qresource prefix="/QGameLight">
+        <file>Resources/OpenSans-Regular.ttf</file>
+        <file>Resources/OpenSans-ExtraBold.ttf</file>
+        <file>Resources/OpenSans-SemiBold.ttf</file>
     </qresource>
 </RCC>

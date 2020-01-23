@@ -17,18 +17,18 @@ eRetCode QSideMenu::initUI()
 	m_pMainLayout->setContentsMargins( 0, 0, 0, 0 );
 
 	m_pItemLayout = new QVBoxLayout( this );
-	m_pMainLayout->setSpacing( 0 );
-	m_pMainLayout->setMargin( 0 );
+	m_pItemLayout->setSpacing( 0 );
+	m_pItemLayout->setMargin( 0 );
 	m_pItemLayout->setContentsMargins( 0, 0, 0, 0 );
 	m_pItemLayout->setAlignment( Qt::AlignTop );
 
 	QLabel* lMenuName = new QLabel( tr( "Menu" ) );
-	lMenuName->setStyleSheet( "QLabel { padding-left:1px; background-color: #FF8080 }" );
+	lMenuName->setStyleSheet( "QLabel { color: #dfe6e9; padding-left:1px; background-color: #636e72; border-bottom: 1px solid #0984e3 }" );
 	lMenuName->setSizePolicy( QSizePolicy( QSizePolicy::Expanding, QSizePolicy::Fixed ) );
 	lMenuName->setFixedHeight( 50 );
 
 	QLabel *lFooter = new QLabel( tr( "Footer" ) );
-	lFooter->setStyleSheet( "QLabel { padding-left:1px; background-color: #8080FF }" );
+	lFooter->setStyleSheet( "QLabel { color: #dfe6e9; padding-left:1px; background-color: #2d3436 }" );
 	lFooter->setSizePolicy( QSizePolicy( QSizePolicy::Expanding, QSizePolicy::Fixed ) );
 	lFooter->setFixedHeight( 40 );
 
@@ -42,7 +42,7 @@ eRetCode QSideMenu::initUI()
 	this->setLayout( m_pMainLayout );
 	this->setFixedWidth( 250 );
 	this->setMinimumHeight( 400 );
-	this->setStyleSheet( "background-color:#404040;" );
+	this->setStyleSheet( "color: #dfe6e9; background-color: #2d3436;" );
 
 	for ( auto pItem : m_vItems )
 	{
@@ -61,7 +61,7 @@ QGLPushButton* QSideMenu::addEntry( QString sName )
 	entry->setObjectName( "menuItem" );
 	entry->setFixedHeight( 40 );
 	entry->setSizePolicy( QSizePolicy( QSizePolicy::Expanding, QSizePolicy::Fixed ) );
-	entry->setStyleSheet( "QLabel { padding-left:1px; color: #ffffff; border-top: 1px solid #606060; background-color: #404040; border: none; }" );
+	entry->setStyleSheet( "color: #dfe6e9; border: none; border-bottom: 1px solid #0984e3; background-color: #2d3436;" );
 	m_vItems.push_back( entry );
 
 	return entry;
@@ -69,6 +69,7 @@ QGLPushButton* QSideMenu::addEntry( QString sName )
 
 void QSideMenu::openMenuItem( int iIndex )
 {
+	// TODO:
 	QMessageBox bx;
 	bx.setText( QString::fromStdString( std::to_string( iIndex ) ) );
 	bx.exec();

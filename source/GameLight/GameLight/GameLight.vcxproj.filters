@@ -24,6 +24,9 @@
       <Extensions>ts</Extensions>
       <ParseFiles>false</ParseFiles>
     </Filter>
+    <Filter Include="Widgets">
+      <UniqueIdentifier>{6acfb6a8-4433-43d9-aa31-dc0257c1ae99}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -32,16 +35,22 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="QGameLight.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="QSideMenu.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GLErrorHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QGameLight.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="QSideMenu.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
     <ClCompile Include="QGLPushButton.cpp">
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="QGenericSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QFlowLayout.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -52,18 +61,24 @@
     <ClInclude Include="GLErrorHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="QFlowLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="QGameLight.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="QSideMenu.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="GLDefines.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="QSideMenu.h">
+      <Filter>Widgets</Filter>
+    </QtMoc>
     <QtMoc Include="QGLPushButton.h">
+      <Filter>Widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="QGameLight.h">
+      <Filter>Widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="QGenericSettings.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

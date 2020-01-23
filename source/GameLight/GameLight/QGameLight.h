@@ -11,6 +11,7 @@
 #include <QHBoxLayout>
 
 class QSideMenu;
+class QGenericSettings;
 class QGameLight : public QMainWindow
 {
 	Q_OBJECT
@@ -20,6 +21,7 @@ public:
 
 private:
 	QSideMenu *m_pSideMenu;
+	QGenericSettings *m_pSettings;
 
 	QHBoxLayout *m_pMainLayout;
 	QVBoxLayout *m_pMenuLayout;

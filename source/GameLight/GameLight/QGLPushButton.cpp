@@ -5,6 +5,7 @@ QGLPushButton::QGLPushButton( QWidget* parent /*= ( QWidget* )nullptr*/, QString
 	: QPushButton( sText, parent ), m_iIndex( iIndex )
 {
 	connect( this, SIGNAL( clicked(void) ), this, SLOT( onButtonClicked(void) ) );
+
 }
 
 void QGLPushButton::onButtonClicked()
