@@ -40,7 +40,7 @@ CError QMainWidget::getPage( QWidget ** pPage, std::string sPageName )
 	if ( m_mPages.find( sPageName ) == m_mPages.end() )
 	{
 		erRet.eErrorCode = eCritical;
-		erRet.sError = tr( "Could not receive the page '" ).toStdString() + sPageName + tr( "'.\nPlease contact the developer!" ).toStdString();
+		erRet.sError = tr( "Could not receive the page '%1'.\nPlease contact the developer!" ).arg(sPageName.c_str()).toStdString();
 		erRet.sLocation += " -> QMainWidget::getPage()";
 	}
 	else

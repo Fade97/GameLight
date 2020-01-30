@@ -56,6 +56,9 @@
     <ClCompile Include="QFlowLayout.cpp">
       <Filter>Widgets</Filter>
     </ClCompile>
+    <ClCompile Include="GLSetting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -65,7 +68,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="QFlowLayout.h">
-      <Filter>Header Files</Filter>
+      <Filter>Widgets</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -81,11 +84,14 @@
     <QtMoc Include="QGameLight.h">
       <Filter>Widgets</Filter>
     </QtMoc>
-    <QtMoc Include="QGenericSettings.h">
+    <QtMoc Include="GLSetting.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="QMainWidget.h">
-      <Filter>Header Files</Filter>
+      <Filter>Widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="QGenericSettings.h">
+      <Filter>Widgets</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

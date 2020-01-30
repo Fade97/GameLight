@@ -54,7 +54,7 @@ public:
 	static QString getError( std::string s, eRetCode e = eNone )
 	{
 		if ( s.compare( "genericError" ) == 0 )
-			return QString::fromStdString( tr( "We have encounterd an error: " ).toStdString() + ( e != eNone ? std::to_string( e ) : std::string( "" ) ) );
+			return  tr( "We have encounterd an error: %1" ).arg( e != eNone ? std::to_string( e ).c_str() : "" );
 		else
 			return tr( "Unknown error. Please contact the developer!" );
 	}

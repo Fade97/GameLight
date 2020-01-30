@@ -70,7 +70,6 @@ QGLPushButton* QSideMenu::addEntry( QString sName, std::string sPageName )
 
 void QSideMenu::openMenuItem( std::string sPageName )
 {
-	// TODO:
 	emit onMenuItemSelected(sPageName);
 }
 
