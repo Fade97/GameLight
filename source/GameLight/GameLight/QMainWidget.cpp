@@ -32,18 +32,27 @@ void QMainWidget::createPages()
 
 	/**************************************Game Categories******************************************/
 	m_pGamesCategory = new QWidget( this );
-	QFlowLayout *m_pGCLayout = new QFlowLayout(m_pGamesCategory);
+	QFlowLayout *m_pGCLayout = new QFlowLayout( m_pGamesCategory );
 	m_pGamesCategory->setLayout( m_pGCLayout );
 
 	m_pGCRocketLeague = new QCategory( m_pGamesCategory );
-	m_pGCRocketLeague->loadImage( R"(:/QGameLight/Resources/RLBackground.png)" );
+	GLErrorHandler::show( m_pGCRocketLeague->loadImage( R"(:/QGameLight/Resources/RLBackground.png)" ) );
 	m_pGCLayout->addWidget( m_pGCRocketLeague );
 
 	m_pGCMinecraft = new QCategory( m_pGamesCategory );
-	m_pGCMinecraft->loadImage( R"(:/QGameLight/Resources/MCBackground.png)" );
+	GLErrorHandler::show( m_pGCMinecraft->loadImage( R"(:/QGameLight/Resources/MCBackground.png)" ) );
 	m_pGCLayout->addWidget( m_pGCMinecraft );
 
 	addPage( m_pGamesCategory, "gameSettings" );
+	addPage( new QGenericSettings( this ), "RocketLeagueSettings" );
+	GLSetting* pSetting3 = new GLSetting( "Generic 1", tr( "My first setting" ) );
+	pSetting3->setValue( true );
+	( (QGenericSettings*)m_mPages["RocketLeagueSettings"] )->setSetting( pSetting3 );
+
+	addPage( new QGenericSettings( this ), "MinecraftSettings" );
+
+	connect( m_pGCRocketLeague, SIGNAL( categoryClicked( void ) ), this, SLOT( displayRLSettings( void ) ) );
+	connect( m_pGCMinecraft, SIGNAL( categoryClicked( void ) ), this, SLOT( displayMCSettings( void ) ) );
 }
 
 void QMainWidget::addPage( QWidget * pPage, std::string sPageName )
@@ -70,6 +79,16 @@ CError QMainWidget::getPage( QWidget ** pPage, std::string sPageName )
 	}
 
 	return erRet;
+}
+
+void QMainWidget::displayRLSettings()
+{
+	changePage( "RocketLeagueSettings" );
+}
+
+void QMainWidget::displayMCSettings()
+{
+	changePage( "MinecraftSettings" );
 }
 
 void QMainWidget::changePage( std::string sPageName )

@@ -18,6 +18,9 @@ public:
 
 public slots:
 	void changePage( std::string sPageName );
+private slots:
+	void displayRLSettings();
+	void displayMCSettings();
 
 private:
 	QVBoxLayout * m_pLayout;

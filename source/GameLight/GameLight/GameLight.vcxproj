@@ -105,6 +105,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="GLErrorHandler.cpp" />
     <ClCompile Include="QCategory.cpp" />
+    <ClCompile Include="QClickableLabel.cpp" />
     <ClCompile Include="QFlowLayout.cpp" />
     <ClCompile Include="QGameLight.cpp" />
     <ClCompile Include="QGenericSettings.cpp" />
@@ -125,6 +126,7 @@
     <QtMoc Include="QGenericSettings.h" />
     <QtMoc Include="GLSetting.h" />
     <QtMoc Include="QCategory.h" />
+    <QtMoc Include="QClickableLabel.h" />
     <ClInclude Include="QFlowLayout.h" />
     <QtMoc Include="QMainWidget.h" />
     <ClInclude Include="stdafx.h" />

@@ -60,7 +60,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="QCategory.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="QClickableLabel.cpp">
+      <Filter>Widgets</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -97,7 +100,10 @@
       <Filter>Widgets</Filter>
     </QtMoc>
     <QtMoc Include="QCategory.h">
-      <Filter>Header Files</Filter>
+      <Filter>Widgets</Filter>
+    </QtMoc>
+    <QtMoc Include="QClickableLabel.h">
+      <Filter>Widgets</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
