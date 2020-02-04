@@ -40,7 +40,7 @@ void QMainWidget::createPages()
 	( (QGenericSettings*)m_mPages["generalSettings"] )->getSettingList();
 
 	addPage( new QCategory( this ), "gameSettings" );
-	GLErrorHandler::show( ( (QCategory*)m_mPages["gameSettings"] )->loadImage( R"(C:\Users\fabian.duerkop\Pictures\header_alt_assets_10.png)" ) );
+	GLErrorHandler::show( ( (QCategory*)m_mPages["gameSettings"] )->loadImage( R"(:/QGameLight/Resources/header_alt_assets_10.png)" ) );
 }
 
 void QMainWidget::addPage( QWidget * pPage, std::string sPageName )
