@@ -26,17 +26,32 @@ bool GLErrorHandler::show( eRetCode e, string sLocation )
 
 bool GLErrorHandler::show( CError e, string sLocation )
 {
+#ifdef DEBUG
+	if ( e.eErrorCode != eSuccess && e.eErrorCode != eNone )
+	{
+		qDebug() << "[*] " <<( e.sError + ( sLocation == "" ?
+			( e.sLocation == "" ?
+			  "" :
+			  e.sLocation ) :
+			  ( "\n" + sLocation ) ) ).c_str();
+		return false;
+	}
+	return true;
+#endif // DEBUG
+#ifndef DEBUG
+
 	bool bRet = true;
 	if ( e.eErrorCode != eSuccess && e.eErrorCode != eNone )
 	{
 		QMessageBox msgBox;
-		msgBox.setText( ( e.sError + ( sLocation == "" ? 
-				(e.sLocation == "" ?
-					"" : 
-					e.sLocation) : 
-			("\n" + sLocation) ) ).c_str() );
+		msgBox.setText( ( e.sError + ( sLocation == "" ?
+			( e.sLocation == "" ?
+			  "" :
+			  e.sLocation ) :
+			  ( "\n" + sLocation ) ) ).c_str() );
 		msgBox.exec();
 		bRet = false;
 	}
 	return bRet;
+#endif DEBUG
 }

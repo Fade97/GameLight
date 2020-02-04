@@ -4,15 +4,13 @@
 <context>
     <name>QGenericSettings</name>
     <message>
-        <location filename="QGenericSettings.cpp" line="22"/>
-        <source>The setting with key &apos;%0&apos; could not be found</source>
-        <oldsource>The setting with key </oldsource>
+        <location filename="QGenericSettings.cpp" line="23"/>
+        <source>The setting with key </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QGenericSettings.cpp" line="22"/>
-        <source>The setting with key &apos;%0&apos; could not be found</source>
-        <oldsource> could not be found</oldsource>
+        <location filename="QGenericSettings.cpp" line="23"/>
+        <source> could not be found</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -33,18 +31,10 @@
 <context>
     <name>QMainWidget</name>
     <message>
-        <location filename="QMainWidget.cpp" line="43"/>
+        <location filename="QMainWidget.cpp" line="58"/>
         <source>Could not receive the page &apos;%1&apos;.
 Please contact the developer!</source>
         <oldsource>Could not receive the page &apos;</oldsource>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="QMainWidget.cpp" line="43"/>
-        <source>Could not receive the page &apos;%1&apos;.
-Please contact the developer!</source>
-        <oldsource>&apos;.
-Please contact the developer!</oldsource>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -56,17 +46,12 @@ Please contact the developer!</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QSideMenu.cpp" line="30"/>
-        <source>Footer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="QSideMenu.cpp" line="36"/>
+        <location filename="QSideMenu.cpp" line="37"/>
         <source>General</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="QSideMenu.cpp" line="37"/>
+        <location filename="QSideMenu.cpp" line="38"/>
         <source>Game Settings</source>
         <translation type="unfinished"></translation>
     </message>

@@ -14,6 +14,10 @@ int main(int argc, char *argv[])
 	QHelper::instance()->sansMedium = QFont( sFontFamily, 10 );
 	QHelper::instance()->sansSmall = QFont( sFontFamily, 8 );
 	
+	QTranslator translator;
+	translator.load( "gamelight_" + QLocale::system().name() );
+	a.installTranslator( &translator );
+
 	QGameLight w;
 	w.show();
 	return a.exec();

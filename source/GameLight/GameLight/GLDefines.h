@@ -63,7 +63,12 @@ public:
 	{
 		if ( widget != NULL )
 		{
-			widget->setFont( font );
+			if ( widget->font() != QHelper::instance()->sansSmall &&
+				 widget->font() != QHelper::instance()->sansMedium &&
+				 widget->font() != QHelper::instance()->sansLarge )
+			{
+				widget->setFont( font );
+			}
 
 			const QList<QObject*> list = widget->children();
 			for ( int i = 0; i < list.size(); ++i )

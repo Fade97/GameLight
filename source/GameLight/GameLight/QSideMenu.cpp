@@ -27,14 +27,15 @@ eRetCode QSideMenu::initUI()
 	lMenuName->setSizePolicy( QSizePolicy( QSizePolicy::Expanding, QSizePolicy::Fixed ) );
 	lMenuName->setFixedHeight( 50 );
 
-	QLabel *lFooter = new QLabel( tr( "Footer" ) );
+	QLabel *lFooter = new QLabel( QString::fromStdWString(L"© Fabian Dürkop, 2019") );
+	QHelper::updateAllFonts( lFooter, QHelper::instance()->sansSmall );
 	lFooter->setStyleSheet( "QLabel { color: #dfe6e9; padding-left:1px; background-color: #2d3436 }" );
 	lFooter->setSizePolicy( QSizePolicy( QSizePolicy::Expanding, QSizePolicy::Fixed ) );
 	lFooter->setFixedHeight( 40 );
 
 	// Add Menu Buttons here
-	m_pItemLayout->addWidget( addEntry( tr( "General" ), "sideMenu" ), 0 );
-	m_pItemLayout->addWidget( addEntry( tr( "Game Settings" ), "genericSettings" ), 0 );
+	m_pItemLayout->addWidget( addEntry( tr( "General" ), "generalSettings" ), 0 );
+	m_pItemLayout->addWidget( addEntry( tr( "Game Settings" ), "gameSettings" ), 0 );
 
 	m_pMainLayout->addWidget( lMenuName, 0, Qt::AlignTop );
 	m_pMainLayout->addLayout( m_pItemLayout, 1 );
@@ -70,7 +71,7 @@ QGLPushButton* QSideMenu::addEntry( QString sName, std::string sPageName )
 
 void QSideMenu::openMenuItem( std::string sPageName )
 {
-	emit onMenuItemSelected(sPageName);
+	emit onMenuItemSelected( sPageName );
 }
 
 void QSideMenu::paintEvent( QPaintEvent *pe )

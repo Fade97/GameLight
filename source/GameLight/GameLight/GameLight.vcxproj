@@ -73,6 +73,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <PreprocessorDefinitions>$(Qt_DEFINES_);%(PreprocessorDefinitions);DEBUG</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -103,6 +104,7 @@
     <ClCompile Include="GLSetting.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="GLErrorHandler.cpp" />
+    <ClCompile Include="QCategory.cpp" />
     <ClCompile Include="QFlowLayout.cpp" />
     <ClCompile Include="QGameLight.cpp" />
     <ClCompile Include="QGenericSettings.cpp" />
@@ -122,6 +124,7 @@
     <QtMoc Include="QGLPushButton.h" />
     <QtMoc Include="QGenericSettings.h" />
     <QtMoc Include="GLSetting.h" />
+    <QtMoc Include="QCategory.h" />
     <ClInclude Include="QFlowLayout.h" />
     <QtMoc Include="QMainWidget.h" />
     <ClInclude Include="stdafx.h" />

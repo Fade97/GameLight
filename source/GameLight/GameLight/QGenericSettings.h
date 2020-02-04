@@ -1,6 +1,7 @@
 #pragma once
 #include <QWidget>
 #include <string>
+#include <vector>
 #include <map>
 
 class GLSetting;
@@ -13,7 +14,16 @@ class QGenericSettings :
 public:
 	QGenericSettings( QWidget *parent = ( QWidget * ) nullptr );
 
-	CError getSetting( std::string sSettingName, /*OUT*/ GLSetting *pSetting );
+	std::vector<std::string> getSettingList()
+	{
+		std::vector<std::string> vRet;
+		for ( auto spair : m_mSettings )
+		{
+			vRet.push_back( spair.first );
+		}
+		return vRet;
+	}
+	CError getSetting( std::string sSettingName, /*OUT*/ GLSetting **pSetting );
 	CError setSetting( GLSetting *pSetting );
 
 protected:
