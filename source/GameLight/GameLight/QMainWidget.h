@@ -3,6 +3,7 @@
 #include <string>
 #include <map>
 
+class QCategory;
 class QMainWidget :
 	public QWidget
 {
@@ -22,5 +23,10 @@ private:
 	QVBoxLayout * m_pLayout;
 	QWidget * m_pCurrentPage;
 	std::map<std::string, QWidget*> m_mPages;
+
+	/*Pages*/
+	QWidget *m_pGamesCategory;
+	QCategory *m_pGCRocketLeague;
+	QCategory *m_pGCMinecraft;
 };
 

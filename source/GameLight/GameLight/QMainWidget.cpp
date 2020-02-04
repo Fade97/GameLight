@@ -15,16 +15,7 @@ QMainWidget::QMainWidget( QWidget *parent )
 	m_pLayout->setMargin( 0 );
 	m_pLayout->setContentsMargins( 0, 0, 0, 0 );
 
-	// set default page
-	//GLErrorHandler::show( getPage( &m_pCurrentPage, "generalSettings" ) );
 	changePage( "generalSettings" );
-
-	GLSetting *pSet = nullptr;
-	( (QGenericSettings*)m_mPages["generalSettings"] )->getSetting( "Generic 1", &pSet );
-	if ( pSet != nullptr )
-	{
-		qDebug() << pSet->getValue();
-	}
 }
 
 void QMainWidget::createPages()
@@ -39,8 +30,20 @@ void QMainWidget::createPages()
 	( (QGenericSettings*)m_mPages["generalSettings"] )->setSetting( pSetting2 );
 	( (QGenericSettings*)m_mPages["generalSettings"] )->getSettingList();
 
-	addPage( new QCategory( this ), "gameSettings" );
-	GLErrorHandler::show( ( (QCategory*)m_mPages["gameSettings"] )->loadImage( R"(:/QGameLight/Resources/header_alt_assets_10.png)" ) );
+	/**************************************Game Categories******************************************/
+	m_pGamesCategory = new QWidget( this );
+	QFlowLayout *m_pGCLayout = new QFlowLayout(m_pGamesCategory);
+	m_pGamesCategory->setLayout( m_pGCLayout );
+
+	m_pGCRocketLeague = new QCategory( m_pGamesCategory );
+	m_pGCRocketLeague->loadImage( R"(:/QGameLight/Resources/RLBackground.png)" );
+	m_pGCLayout->addWidget( m_pGCRocketLeague );
+
+	m_pGCMinecraft = new QCategory( m_pGamesCategory );
+	m_pGCMinecraft->loadImage( R"(:/QGameLight/Resources/MCBackground.png)" );
+	m_pGCLayout->addWidget( m_pGCMinecraft );
+
+	addPage( m_pGamesCategory, "gameSettings" );
 }
 
 void QMainWidget::addPage( QWidget * pPage, std::string sPageName )

@@ -3,6 +3,7 @@
         <file>Resources/OpenSans-Regular.ttf</file>
         <file>Resources/OpenSans-ExtraBold.ttf</file>
         <file>Resources/OpenSans-SemiBold.ttf</file>
-        <file>Resources/header_alt_assets_10.png</file>
+        <file>Resources/MCBackground.png</file>
+        <file>Resources/RLBackground.png</file>
     </qresource>
 </RCC>

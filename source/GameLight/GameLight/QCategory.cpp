@@ -14,8 +14,16 @@ CError QCategory::loadImage( QString sImgFile )
 	}
 	else
 	{
-		m_pLayout->addWidget( &m_imgBg );
+		img = img.scaledToWidth( 400, Qt::TransformationMode::SmoothTransformation );
+		int iHeight = img.height();
+
+		QRect rect( 0, (iHeight-170)/2, 400, 170 );
+		img = img.copy( rect );
+
+		m_imgBg.setStyleSheet( "border: 1px solid transparent; border-radius: 25px; background: transparent;" );
 		m_imgBg.setPixmap( img );
+
+		m_pLayout->addWidget( &m_imgBg );
 		m_imgBg.show();
 	}
 

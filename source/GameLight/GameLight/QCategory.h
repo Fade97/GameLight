@@ -16,6 +16,8 @@ public:
 
 	CError loadImage( QString sImgFile );
 
+	// TODO: add click signals
+
 private:
 	QFlowLayout *m_pLayout;
 	QLabel m_imgBg;
